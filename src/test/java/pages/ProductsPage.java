@@ -60,6 +60,12 @@ public class ProductsPage extends BasePage{
             return item;
         }
         return null;
+        
+        /* OR
+    private WebElement getItemContainerByName(String itemName) {
+        return driver.findElement(By.xpath(String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']", itemName)));
+    }*/
+        
     }
     public boolean isShoppingCartLinkDisplayed() {
         return driver.findElement(shoppingCartLink).isDisplayed();
@@ -80,11 +86,6 @@ public class ProductsPage extends BasePage{
         return driver.findElement(titleOfPageLocator).isDisplayed();
     }
 }
-
-/* OR
-    private WebElement getItemContainerByName(String itemName) {
-        return driver.findElement(By.xpath(String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']", itemName)));
-    }*/
 
 
 
