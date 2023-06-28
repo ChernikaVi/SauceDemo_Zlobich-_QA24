@@ -13,25 +13,35 @@ public class CheckOutYourInformationPage extends BasePage{
     private By continueButtonLocator = By.id("continue");
     private By cancelButtonLocator = By.id("cancel");
 
-
+    @Step
     public void setFirstNameValue(String firstName) {
         driver.findElement(firstNameInputLocator).sendKeys(firstName);
     }
+
+    @Step
     public void setLastNameValue(String lastName) {
         driver.findElement(lastNameInputLocator).sendKeys(lastName);
     }
+    
+    @Step
     public void setPostalCodeValue(String postalCode) {
         driver.findElement(postalCodeInputLocator).sendKeys(postalCode);
     }
+    
+    @Step
     public void checkOut(String firstname, String lastName, String postalCode) {
         this.setFirstNameValue(firstname);
         this.setLastNameValue(lastName);
         this.setPostalCodeValue(postalCode);
         this.clickContinueButton();
     }
+    
+    @Step
     public void clickContinueButton() {
         driver.findElement(continueButtonLocator).click();
     }
+    
+    @Step
     public void clickCancelButton() {
         driver.findElement(cancelButtonLocator).click();
     }
