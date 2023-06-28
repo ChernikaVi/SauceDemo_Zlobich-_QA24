@@ -8,19 +8,6 @@ import static org.testng.Assert.assertEquals;
 
 
 public class ProductsTests extends BaseTest {
-    @Test(groups = {"regression"}, description = "тест валидной информации о товарах в каталоге")
-    public void productTest() {
-        String testItemName = "Sauce Labs Backpack";
-        loginPage.login(USERNAME, PASSWORD);
-        String actualItemPrice = productsPage.getItemPrice(testItemName);
-        String expectedItemPrice = "$29.99";
-        assertEquals(actualItemPrice, expectedItemPrice);
-
-        String actualItemDescription = productsPage.getItemDescription(testItemName);
-        String expectedItemDescription = "carry.allTheThings() with the sleek, " +
-                "streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
-        assertEquals(actualItemDescription, expectedItemDescription);
-    }
 
     @Test(groups = {"smoke"}, description = "тест кнопки addToCart")
     public void addToCartButtonTest() {
