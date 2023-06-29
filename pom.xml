@@ -41,7 +41,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.12.4</version>
+                <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite}</suiteXmlFile>
@@ -63,10 +63,9 @@
 
     <properties>
         <suite>src/test/java/suite/smokeTests.xml</suite>
-        <aspectj.version>1.9.19</aspectj.version>
+        <aspectj.version>1.9.8</aspectj.version>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 </project>
