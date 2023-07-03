@@ -24,7 +24,7 @@ public abstract class BaseTest {
     protected LoginPage loginPage;
     protected ProductsPage productsPage;
     protected CartPage cartPage;
-    protected CheckOutYourInformationPage checkOutPage;
+    protected CheckOutYourInformationPage checkOutYourInformationPage;
     protected CheckoutOverviewPage checkoutOverviewPage;
     protected CheckoutCompletePage checkoutCompletePage;
     protected ProductsDetailsPage productDetailsPage;
@@ -43,13 +43,16 @@ public abstract class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
+        context.setAttribute("driver", driver);
+
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);
         cartPage = new CartPage(driver);
-        checkOutPage = new CheckOutYourInformationPage(driver);
         checkoutOverviewPage = new CheckoutOverviewPage(driver);
         checkoutCompletePage = new CheckoutCompletePage(driver);
         productDetailsPage = new ProductsDetailsPage(driver);
+        checkOutYourInformationPage = new CheckOutYourInformationPage(driver);
+
     }
 
     @AfterClass(alwaysRun = true)

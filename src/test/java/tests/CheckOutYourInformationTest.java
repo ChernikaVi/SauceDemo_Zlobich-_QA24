@@ -11,10 +11,10 @@ public class CheckOutYourInformationTest extends BaseTest{
         productsPage.clickAddToCartButton(testItemName);
         productsPage.clickShoppingCartLink(testItemName);
         cartPage.clickCheckOutButton();
-        checkOutPage.setFirstNameValue(FIRSTNAME);
-        checkOutPage.setLastNameValue(LASTNAME);
-        checkOutPage.setPostalCodeValue(ZIPCODE);
-        checkOutPage.clickContinueButton();
+        checkOutYourInformationPage.setFirstNameValue(FIRSTNAME);
+        checkOutYourInformationPage.setLastNameValue(LASTNAME);
+        checkOutYourInformationPage.setPostalCodeValue(ZIPCODE);
+        checkOutYourInformationPage.clickContinueButton();
         Assert.assertTrue(checkoutOverviewPage.finishButtonIsDisplayed());
     }
 
@@ -25,7 +25,7 @@ public class CheckOutYourInformationTest extends BaseTest{
         productsPage.clickAddToCartButton(testItemName);
         productsPage.clickShoppingCartLink(testItemName);
         cartPage.clickCheckOutButton();
-        checkOutPage.clickCancelButton();
+        checkOutYourInformationPage.clickCancelButton();
         Assert.assertTrue(cartPage.isContinueShoppingIsDisplayed());
     }
 }

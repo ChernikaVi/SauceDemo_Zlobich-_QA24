@@ -52,7 +52,7 @@ public class ProductsPage extends BasePage{
         return itemContainer.findElement(getItemDescription).getText();
     }
 
-
+/*
     private WebElement getItemContainerByName(String itemName) {
         List<WebElement> allItems = driver.findElements(itemsLocator);
         for (WebElement item : allItems) {
@@ -60,13 +60,12 @@ public class ProductsPage extends BasePage{
             return item;
         }
         return null;
-        
-        /* OR
+        */
+
     private WebElement getItemContainerByName(String itemName) {
         return driver.findElement(By.xpath(String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']", itemName)));
-    }*/
-        
     }
+
     public boolean isShoppingCartLinkDisplayed() {
         return driver.findElement(shoppingCartLink).isDisplayed();
     }

@@ -11,7 +11,7 @@ public class CheckOutCompleteTest extends BaseTest{
         productsPage.clickAddToCartButton(testItemName);
         productsPage.clickShoppingCartLink(testItemName);
         cartPage.clickCheckOutButton();
-        checkOutPage.checkOut(FIRSTNAME, LASTNAME, ZIPCODE);
+        checkOutYourInformationPage.checkOut(FIRSTNAME, LASTNAME, ZIPCODE);
         checkoutOverviewPage.clickFinishButton();
         Assert.assertTrue(checkoutCompletePage.completeTextIsDisplayed());
         Assert.assertTrue(checkoutCompletePage.backHomeButtonIsDisplayed());

@@ -34,8 +34,8 @@ public class CartTests extends BaseTest {
         productsPage.clickAddToCartButton(testItemName);
         productsPage.clickShoppingCartLink(testItemName);
         cartPage.clickCheckOutButton();
-        Assert.assertTrue(checkOutPage.firstNameInputIsDisplayed());
-        Assert.assertTrue(checkOutPage.lastNameInputIsDisplayed());
+        Assert.assertTrue(checkOutYourInformationPage.firstNameInputIsDisplayed());
+        Assert.assertTrue(checkOutYourInformationPage.lastNameInputIsDisplayed());
     }
 
     @Test(groups = {"smoke"}, description = "тест кнопки continueShopping")

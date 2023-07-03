@@ -26,8 +26,8 @@ public class ProductsTests extends BaseTest {
         Assert.assertTrue(productsPage.addToCartButtonIsDisplayed());
     }
 
-    @Test(groups = {"regression"}, dataProvider = "productsInfoTest")
-    public void productsInfoTest(String ItemName, String expectedItemPrice, String expectedDescription) {
+    @Test(groups = {"regression"}, dataProvider = "productsInfoTestData")
+    public void productsInfoTestData(String ItemName, String expectedItemPrice, String expectedDescription) {
         loginPage.login(USERNAME, PASSWORD);
         assertEquals(productsPage.getItemPrice(ItemName), expectedItemPrice);
         assertEquals(productsPage.getItemDescription(ItemName), expectedDescription);
@@ -35,7 +35,7 @@ public class ProductsTests extends BaseTest {
     }
 
     @DataProvider
-    public Object[][] productsInfoTest() {
+    public Object[][] productsInfoTestData() {
         return new Object[][]{
                 {"Sauce Labs Backpack", "$29.99", "carry.allTheThings() with the sleek, streamlined " +
                         "Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."},

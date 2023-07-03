@@ -11,7 +11,7 @@ public class CheckOutOverviewTests extends BaseTest{
         productsPage.clickAddToCartButton(testItemName);
         productsPage.clickShoppingCartLink(testItemName);
         cartPage.clickCheckOutButton();
-        checkOutPage.checkOut(FIRSTNAME, LASTNAME, ZIPCODE);
+        checkOutYourInformationPage.checkOut(FIRSTNAME, LASTNAME, ZIPCODE);
 
         String actualItemName = checkoutOverviewPage.getItemName();
         String expectedItemName = "Sauce Labs Backpack";
@@ -38,7 +38,7 @@ public class CheckOutOverviewTests extends BaseTest{
         productsPage.clickAddToCartButton(testItemName);
         productsPage.clickShoppingCartLink(testItemName);
         cartPage.clickCheckOutButton();
-        checkOutPage.checkOut(FIRSTNAME, LASTNAME, ZIPCODE);
+        checkOutYourInformationPage.checkOut(FIRSTNAME, LASTNAME, ZIPCODE);
         checkoutOverviewPage.clickCancelButton();
         productsPage.getItemDescription(testItemName);
 
