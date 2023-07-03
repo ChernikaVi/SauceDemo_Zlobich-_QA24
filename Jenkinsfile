@@ -15,7 +15,7 @@ pipeline {
     }
 
     parameters {
-        gitParameter branchFilter: defaultValue: 'main', name: 'BRANCH', type: 'PT_BRANCH'
+        gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'BRANCH', type: 'PT_BRANCH'
         choice(name: 'SUITE', choices: ['suites/smokeTests.xml', 'suites/regressionTests.xml'], description: 'Choose suite to run')
         choice (name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'Select a browser')
         booleanParam (name: 'HEADLESS', defaultValue: false, description: 'Headless mode')
