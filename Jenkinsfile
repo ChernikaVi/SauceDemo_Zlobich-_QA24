@@ -15,7 +15,7 @@ pipeline {
     }
 
     parameters {
-        choice(name: 'SUITE', choices: ['suites/smokeTests.xml', 'suites/regressionTests.xml'], description: 'Choose suite to run')
+        choice(name: 'SUITE', choices: ['src/test/java/suite/smokeTests.xml', 'src/test/java/suite/regressionTests.xml'], description: 'Choose suite to run')
         choice (name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'Select a browser')
         booleanParam (name: 'HEADLESS', defaultValue: false, description: 'Headless mode')
     }
